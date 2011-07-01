@@ -14,7 +14,7 @@ public class Ashvm
 	{
 		if (args.length != 1)
 		{
-			System.out.println("usage: java Ashvm [sourcefile]");
+			System.out.println("usage: java -jar Ashvm.jar [sourcefile]");
 			System.exit(0);
 		}
 

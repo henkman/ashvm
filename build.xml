@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="deploy">
+
+	<path id="ashvm.class.path">
+		<pathelement location="bin" />
+		<pathelement location="lib/antlr-3.3-complete.jar" />
+	</path>
+
+	<target name="clean">
+		<delete file="Ashvm.jar" />
+		<delete dir="bin" />
+	</target>
+
+	<target name="build" depends="clean">
+		<mkdir dir="bin" />
+		<javac srcdir="src" includeantruntime="false" destdir="bin" encoding="UTF-8">
+			<classpath refid="ashvm.class.path" />
+		</javac>
+	</target>
+
+	<target name="deploy" depends="build">
+		<jar destfile="Ashvm.jar" basedir="bin" encoding="UTF-8">
+			<manifest>
+				<attribute name="Main-Class" value="org.ashvm.Ashvm" />
+				<attribute name="Class-Path" value=". lib/antlr-3.3-complete.jar" />
+			</manifest>
+		</jar>
+	</target>
+</project>
