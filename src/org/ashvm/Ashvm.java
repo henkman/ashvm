@@ -30,7 +30,12 @@ public class Ashvm
 		final TokenStream tokens = new TokenRewriteStream(lex);
 		final AshvmParser parser = new AshvmParser(tokens);
 
-		final File dir = sourceFile.getParentFile();
+		File dir = sourceFile.getParentFile();
+		if (dir == null)
+		{
+			dir = new File(".");
+		}
+
 		String fileName = sourceFile.getName();
 		final int dotPos = fileName.indexOf('.');
 		if (dotPos != -1)
