@@ -1,0 +1,22 @@
+; put a string into memory, s contains the address of the first char of the string
+str s "Hello World"
+; nullbyte
+int sEnd 0 
+
+; because this assembler allows no forward references the end has to come first
+		jmp 1		
+END:	end			
+CODE:	
+		push s		
+
+LOOP:	
+		dup			
+		peek		
+		dup			
+		push 0		
+		cmp			
+		jz END		
+		pchr		
+		inc			
+		jmp LOOP	
+		

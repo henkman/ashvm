@@ -1,0 +1,52 @@
+This is an assembler for the hack vm
+
+instructions:
+	nop - does nothing
+	pint - prints S0
+	pint integer - prints the integer
+	pchr - prints S0 as ASCII char
+	pchr integer - prints the integer as ASCII char
+	pchr string - prints the first character as ASCII char
+	push identifier - pushes the memory address of the identifier
+	push integer - pushes the integer
+	push string - pushes the first character
+	add - "S1 + S0"
+	add integer - adds integer to S0
+	mul - "S1 * S0"
+	mul integer - multiplicates integer and S0
+	sub - "S1 - S0"
+	sub integer - subtracts integer from S0
+	div - "S1 / S0"
+	div integer - divides integer from S0
+	cmp - Push -1 if S1<S0, 0 if S1=S0, or 1 S1>S0
+	jmp - jumps S0 forward
+	jmp integer - jumps integer forward
+	jmp identifier - jumps to label
+	jz - jumps S0 forward if S1 is 0
+	jz integer - jumps integer forward if S0 is 0
+	jz identifier - jumps to label if S0 is 0
+	call - calls S0
+	call integer - calls integer
+	call identifier - calls label
+	ret - return
+	peek - Push the value of memory cell S0
+	poke - Store S1 into memory cell S0
+	pick - Push a copy of S<S0+1>
+	roll - Remove S<S0+1> from the stack and push it on top
+	drop - Drop S0
+	end - Terminate the program
+	dup - duplicates S0
+	inc - increments S0
+	dec - decrements S0
+	str identifier string - puts a string into memory - the identifier is a pointer to the memory contents
+	int identifier integer - puts am integer into memory - the identifier is a pointer to the memory contents
+
+	
+for more about hackvm see
+	http://progopedia.com/language/hack-vm/
+	http://www.hacker.org/hvm/
+	
+	
+To run the produced code you can use my implementation of Hack VM:
+	https://github.com/papplampe/gohackvm
+	
