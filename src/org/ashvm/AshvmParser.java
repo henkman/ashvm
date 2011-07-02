@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 D:\\Programmieren\\projects\\ashvm\\Ashvm.g 2011-07-02 17:41:19
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 Ashvm.g 2011-07-02 17:41:19
 
 package org.ashvm;
 
@@ -84,7 +84,7 @@ public class AshvmParser extends Parser
 	@Override
 	public String getGrammarFileName()
 	{
-		return "D:\\Programmieren\\projects\\ashvm\\Ashvm.g";
+		return "Ashvm.g";
 	}
 
 	PrintStream codeOut = System.out;
@@ -470,18 +470,18 @@ public class AshvmParser extends Parser
 	}
 
 	// $ANTLR start "prog"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:404:1: prog : ( instruction
+	// Ashvm.g:404:1: prog : ( instruction
 	// )* ;
 	public final void prog() throws RecognitionException
 	{
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:404:6: ( (
+			// Ashvm.g:404:6: ( (
 			// instruction )* )
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:404:8: ( instruction
+			// Ashvm.g:404:8: ( instruction
 			// )*
 			{
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:404:8: (
+				// Ashvm.g:404:8: (
 				// instruction )*
 				loop1:
 				do
@@ -497,7 +497,7 @@ public class AshvmParser extends Parser
 					switch (alt1)
 					{
 						case 1:
-						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:404:8:
+						// Ashvm.g:404:8:
 						// instruction
 						{
 							this.pushFollow(AshvmParser.FOLLOW_instruction_in_prog47);
@@ -531,7 +531,7 @@ public class AshvmParser extends Parser
 	// $ANTLR end "prog"
 
 	// $ANTLR start "instruction"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:407:1: instruction : (
+	// Ashvm.g:407:1: instruction : (
 	// identifier COLON | NOP instruction_end | PINT instruction_end | PINT
 	// integer instruction_end | PCHR instruction_end | PCHR integer
 	// instruction_end | PCHR string instruction_end | PUSH identifier
@@ -595,7 +595,7 @@ public class AshvmParser extends Parser
 
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:408:2: ( identifier
+			// Ashvm.g:408:2: ( identifier
 			// COLON | NOP instruction_end | PINT instruction_end | PINT integer
 			// instruction_end | PCHR instruction_end | PCHR integer
 			// instruction_end | PCHR string instruction_end | PUSH identifier
@@ -620,7 +620,7 @@ public class AshvmParser extends Parser
 			switch (alt2)
 			{
 				case 1:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:408:4: identifier
+				// Ashvm.g:408:4: identifier
 				// COLON
 				{
 					this.pushFollow(AshvmParser.FOLLOW_identifier_in_instruction60);
@@ -644,7 +644,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 2:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:419:4: NOP
+				// Ashvm.g:419:4: NOP
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.NOP, AshvmParser.FOLLOW_NOP_in_instruction74);
@@ -658,7 +658,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 3:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:424:4: PINT
+				// Ashvm.g:424:4: PINT
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.PINT,
@@ -673,7 +673,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 4:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:428:4: PINT
+				// Ashvm.g:428:4: PINT
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.PINT,
@@ -695,7 +695,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 5:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:435:4: PCHR
+				// Ashvm.g:435:4: PCHR
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.PCHR,
@@ -710,7 +710,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 6:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:439:4: PCHR
+				// Ashvm.g:439:4: PCHR
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.PCHR,
@@ -732,7 +732,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 7:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:445:4: PCHR
+				// Ashvm.g:445:4: PCHR
 				// string instruction_end
 				{
 					this.match(this.input, AshvmParser.PCHR,
@@ -763,7 +763,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 8:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:459:4: PUSH
+				// Ashvm.g:459:4: PUSH
 				// identifier instruction_end
 				{
 					this.match(this.input, AshvmParser.PUSH,
@@ -792,7 +792,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 9:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:470:4: PUSH
+				// Ashvm.g:470:4: PUSH
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.PUSH,
@@ -813,7 +813,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 10:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:475:4: PUSH
+				// Ashvm.g:475:4: PUSH
 				// string instruction_end
 				{
 					this.match(this.input, AshvmParser.PUSH,
@@ -843,7 +843,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 11:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:488:4: ADD
+				// Ashvm.g:488:4: ADD
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.ADD,
@@ -858,7 +858,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 12:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:492:4: ADD
+				// Ashvm.g:492:4: ADD
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.ADD,
@@ -880,7 +880,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 13:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:499:4: MUL
+				// Ashvm.g:499:4: MUL
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.MUL,
@@ -895,7 +895,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 14:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:503:4: MUL
+				// Ashvm.g:503:4: MUL
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.MUL,
@@ -917,7 +917,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 15:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:510:4: SUB
+				// Ashvm.g:510:4: SUB
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.SUB,
@@ -932,7 +932,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 16:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:514:4: SUB
+				// Ashvm.g:514:4: SUB
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.SUB,
@@ -954,7 +954,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 17:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:521:4: DIV
+				// Ashvm.g:521:4: DIV
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.DIV,
@@ -969,7 +969,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 18:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:525:4: DIV
+				// Ashvm.g:525:4: DIV
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.DIV,
@@ -991,7 +991,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 19:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:532:4: CMP
+				// Ashvm.g:532:4: CMP
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.CMP,
@@ -1006,7 +1006,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 20:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:537:4: JMP
+				// Ashvm.g:537:4: JMP
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.JMP,
@@ -1021,7 +1021,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 21:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:541:4: JMP
+				// Ashvm.g:541:4: JMP
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.JMP,
@@ -1043,7 +1043,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 22:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:547:4: JMP
+				// Ashvm.g:547:4: JMP
 				// identifier instruction_end
 				{
 					this.match(this.input, AshvmParser.JMP,
@@ -1072,7 +1072,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 23:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:558:4: JZ
+				// Ashvm.g:558:4: JZ
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.JZ, AshvmParser.FOLLOW_JZ_in_instruction359);
@@ -1086,7 +1086,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 24:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:562:4: JZ integer
+				// Ashvm.g:562:4: JZ integer
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.JZ, AshvmParser.FOLLOW_JZ_in_instruction370);
@@ -1107,7 +1107,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 25:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:568:4: JZ
+				// Ashvm.g:568:4: JZ
 				// identifier instruction_end
 				{
 					this.match(this.input, AshvmParser.JZ, AshvmParser.FOLLOW_JZ_in_instruction383);
@@ -1135,7 +1135,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 26:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:579:4: CALL
+				// Ashvm.g:579:4: CALL
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.CALL,
@@ -1150,7 +1150,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 27:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:583:4: CALL
+				// Ashvm.g:583:4: CALL
 				// integer instruction_end
 				{
 					this.match(this.input, AshvmParser.CALL,
@@ -1172,7 +1172,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 28:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:589:4: CALL
+				// Ashvm.g:589:4: CALL
 				// identifier instruction_end
 				{
 					this.match(this.input, AshvmParser.CALL,
@@ -1201,7 +1201,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 29:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:600:4: RET
+				// Ashvm.g:600:4: RET
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.RET,
@@ -1216,7 +1216,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 30:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:605:4: PEEK
+				// Ashvm.g:605:4: PEEK
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.PEEK,
@@ -1231,7 +1231,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 31:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:610:4: POKE
+				// Ashvm.g:610:4: POKE
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.POKE,
@@ -1246,7 +1246,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 32:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:615:4: PICK
+				// Ashvm.g:615:4: PICK
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.PICK,
@@ -1261,7 +1261,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 33:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:620:4: ROLL
+				// Ashvm.g:620:4: ROLL
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.ROLL,
@@ -1276,7 +1276,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 34:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:625:4: DROP
+				// Ashvm.g:625:4: DROP
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.DROP,
@@ -1291,7 +1291,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 35:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:630:4: END
+				// Ashvm.g:630:4: END
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.END,
@@ -1306,7 +1306,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 36:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:635:4: DUP
+				// Ashvm.g:635:4: DUP
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.DUP,
@@ -1321,7 +1321,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 37:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:640:4: INC
+				// Ashvm.g:640:4: INC
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.INC,
@@ -1336,7 +1336,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 38:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:645:4: DEC
+				// Ashvm.g:645:4: DEC
 				// instruction_end
 				{
 					this.match(this.input, AshvmParser.DEC,
@@ -1351,7 +1351,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 39:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:650:4: STR
+				// Ashvm.g:650:4: STR
 				// identifier string instruction_end
 				{
 					this.match(this.input, AshvmParser.STR,
@@ -1378,7 +1378,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 40:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:657:4: INT
+				// Ashvm.g:657:4: INT
 				// identifier integer instruction_end
 				{
 					this.match(this.input, AshvmParser.INT,
@@ -1404,7 +1404,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 41:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:663:4:
+				// Ashvm.g:663:4:
 				// instruction_end
 				{
 					this.pushFollow(AshvmParser.FOLLOW_instruction_end_in_instruction615);
@@ -1431,7 +1431,7 @@ public class AshvmParser extends Parser
 	// $ANTLR end "instruction"
 
 	// $ANTLR start "identifier"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:667:1: identifier returns
+	// Ashvm.g:667:1: identifier returns
 	// [String value] : ( IDENTIFIER | );
 	public final String identifier() throws RecognitionException
 	{
@@ -1441,7 +1441,7 @@ public class AshvmParser extends Parser
 
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:668:2: ( IDENTIFIER |
+			// Ashvm.g:668:2: ( IDENTIFIER |
 			// )
 			int alt3 = 2;
 			final int LA3_0 = this.input.LA(1);
@@ -1463,7 +1463,7 @@ public class AshvmParser extends Parser
 			switch (alt3)
 			{
 				case 1:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:668:4: IDENTIFIER
+				// Ashvm.g:668:4: IDENTIFIER
 				{
 					IDENTIFIER22 = (Token) this.match(this.input, AshvmParser.IDENTIFIER,
 							AshvmParser.FOLLOW_IDENTIFIER_in_identifier642);
@@ -1472,7 +1472,7 @@ public class AshvmParser extends Parser
 				}
 					break;
 				case 2:
-				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:671:2:
+				// Ashvm.g:671:2:
 				{
 				}
 					break;
@@ -1493,7 +1493,7 @@ public class AshvmParser extends Parser
 	// $ANTLR end "identifier"
 
 	// $ANTLR start "string"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:673:1: string returns [String
+	// Ashvm.g:673:1: string returns [String
 	// value] : STRING ;
 	public final String string() throws RecognitionException
 	{
@@ -1503,8 +1503,8 @@ public class AshvmParser extends Parser
 
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:674:2: ( STRING )
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:674:4: STRING
+			// Ashvm.g:674:2: ( STRING )
+			// Ashvm.g:674:4: STRING
 			{
 				STRING23 = (Token) this.match(this.input, AshvmParser.STRING,
 						AshvmParser.FOLLOW_STRING_in_string665);
@@ -1527,7 +1527,7 @@ public class AshvmParser extends Parser
 	// $ANTLR end "string"
 
 	// $ANTLR start "integer"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:678:1: integer returns [int
+	// Ashvm.g:678:1: integer returns [int
 	// value] : INTEGER ;
 	public final int integer() throws RecognitionException
 	{
@@ -1537,8 +1537,8 @@ public class AshvmParser extends Parser
 
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:679:2: ( INTEGER )
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:679:4: INTEGER
+			// Ashvm.g:679:2: ( INTEGER )
+			// Ashvm.g:679:4: INTEGER
 			{
 				INTEGER24 = (Token) this.match(this.input, AshvmParser.INTEGER,
 						AshvmParser.FOLLOW_INTEGER_in_integer685);
@@ -1561,15 +1561,15 @@ public class AshvmParser extends Parser
 	// $ANTLR end "integer"
 
 	// $ANTLR start "instruction_end"
-	// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:683:1: instruction_end : (
+	// Ashvm.g:683:1: instruction_end : (
 	// NEWLINE | COMMENT );
 	public final void instruction_end() throws RecognitionException
 	{
 		try
 		{
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:684:2: ( NEWLINE |
+			// Ashvm.g:684:2: ( NEWLINE |
 			// COMMENT )
-			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:
+			// Ashvm.g:
 			{
 				if ((this.input.LA(1) >= AshvmParser.NEWLINE && this.input.LA(1) <= AshvmParser.COMMENT))
 				{
