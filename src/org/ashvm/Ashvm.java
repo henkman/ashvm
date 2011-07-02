@@ -48,6 +48,8 @@ public class Ashvm
 		parser.memOut = new PrintStream(fileWoutExt + ".mem");
 		parser.codeOut = new PrintStream(fileWoutExt + ".hvm");
 		parser.prog();
+		parser.generateReferenceCodes();
+		parser.writeReferenceCodes();
 		parser.printCode();
 		parser.printMemory();
 	}

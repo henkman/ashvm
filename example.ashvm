@@ -1,22 +1,27 @@
-; put a string into memory, s contains the address of the first char of the string
-str s "Hello World"
-; nullbyte
-int sEnd 0 
+; 091+2*+g 0^<0^0:9?P1+09-9-g$09c!
 
-; because this assembler allows no forward references the end has to come first
-		jmp 1		
-END:	end			
-CODE:	
-		push s		
+str s "Hello World" ; puts a string into the initial memory
+int sEnd 0 			; Nullbyte used as end of string marker
 
+	jmp START	; jump to the beginning of our code
+	nop			; caused by a bug it is necessary to have an instruction(not a jump) before a label
+
+PRINTSTRING:
 LOOP:	
-		dup			
-		peek		
-		dup			
-		push 0		
-		cmp			
-		jz END		
-		pchr		
-		inc			
-		jmp LOOP	
-		
+	dup			; duplicate the counter/memory pointer
+	peek		; read out of memory at address S0
+	dup			; duplicate the read memory
+	push 0		; prepare compare with zero	
+	cmp			; compare with zero	
+	jz RET		; if zero the string is read	
+	pchr		; else print the memory as ASCII	
+	inc			; increment the counter/memory pointer	
+	jmp LOOP	; once again
+RET:
+	ret			; return back to caller
+
+START:
+	push s				; push the memory address where the string lies
+	call PRINTSTRING	; call the print function
+	end					; end of program					
+						; notice the newline -> it is necessary

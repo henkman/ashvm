@@ -27,6 +27,30 @@ options
 	HashMap<String, Integer> labels = new HashMap<String, Integer>();
 	HashMap<String, Integer> variables = new HashMap<String, Integer>();
 	
+	List<Reference> references = new ArrayList<Reference>();
+	
+	class Reference
+	{
+		public String label;
+		public int codePos;
+		public int pointer;
+		public char op;
+		public String code;
+		public boolean isBackwardReference;
+		public int shift;
+
+		public Reference(final String label, final int codePos, final int pointer, final char op)
+		{
+			this.label = label;
+			this.codePos = codePos;
+			this.pointer = pointer;
+			this.op = op;
+			this.code = "";
+			this.isBackwardReference = (pointer != -1);
+			this.shift = 0;
+		}
+	}
+
 	String producePositiveInteger(final int integer)
 	{
 		if (integer >= 0 && integer <= 9)
@@ -105,7 +129,7 @@ options
 		return (integer >= 0 ? this.producePositiveInteger(integer) : this
 				.produceNegativeInteger(integer));
 	}
-	
+
 	int calcAddressDiff(final int current, final int aim)
 	{
 		if (current > aim)
@@ -121,89 +145,258 @@ options
 			return 0;
 		}
 	}
-	
-	void appendToCode(char c) {
-		code.add(c);
+
+	void appendToCode(final char c)
+	{
+		this.code.add(c);
 	}
-	
-	void appendToCode(String s) {
-		for(char c : s.toCharArray()) {
-			code.add(c);
+
+	void appendToCode(final String s)
+	{
+		for (final char c : s.toCharArray())
+		{
+			this.code.add(c);
 		}
 	}
-	
-	void writeToCode(char c, int pos) {
-		code.add(pos, c);
+
+	void writeToCode(final char c, final int pos)
+	{
+		this.code.add(pos, c);
 	}
-	
-	void writeToCode(String s, int pos) {
-		for(char c : s.toCharArray()) {
-			code.add(pos++, c);
+
+	void writeToCode(final String s, int pos)
+	{
+		for (final char c : s.toCharArray())
+		{
+			this.code.add(pos++, c);
 		}
 	}
-	
-	void writeToMemory(int val) {
-		memory.add(val);
+
+	void writeToMemory(final int val)
+	{
+		this.memory.add(val);
 	}
-	
-	void writeToMemory(String s) {
-		for(char c : s.toCharArray()) {
-			memory.add((int) c);
+
+	void writeToMemory(final String s)
+	{
+		for (final char c : s.toCharArray())
+		{
+			this.memory.add((int) c);
 		}
 	}
-	
-	int getCurrentCodePosition() {
-		return code.size();
+
+	int getCurrentCodePosition()
+	{
+		return this.code.size();
 	}
-	
-	String generateReferenceCode(int codePos, int pointer, char op) {
-		String oldCode = " ";
-		String newCode = " ";
+
+	void generateBackJumpReferenceCode(final Reference reference)
+	{
+		String yeOldeCode = "im old";
+		String oldCode = reference.code;
+		String newCode = reference.code + " ";
 		int diff;
 		String addCode;
-		
-		for(;;) {
-			diff = calcAddressDiff(codePos + oldCode.length(), pointer);
-			addCode = produceInteger(diff);
-			newCode = addCode + op;
-			if(oldCode.length() == newCode.length()) {
+
+		for (;;)
+		{
+			diff = this.calcAddressDiff(reference.codePos + oldCode.length() + reference.shift,
+					reference.pointer);
+			addCode = this.produceInteger(diff);
+			newCode = addCode + reference.op;
+
+			// we got into an endless loop
+			if (yeOldeCode.length() == newCode.length())
+			{
+				final int d = newCode.length() - oldCode.length();
+				final StringBuilder sb = new StringBuilder();
+				String code;
+				if (d > 0) // newcode is longer
+				{
+					code = oldCode;
+				}
+				else
+				// oldcode is longer
+				{
+					code = newCode;
+				}
+
+				for (int i = 0; i < d; i++)
+				{
+					sb.append(' '); // appending nops
+				}
+				sb.append(code);
+
+				reference.code = sb.toString();
+				return;
+			}
+
+			if (oldCode.length() == newCode.length())
+			{
 				break;
 			}
-			
+
+			yeOldeCode = oldCode;
 			oldCode = newCode;
 		}
-		return newCode;
+
+		reference.code = newCode;
 	}
-	
-	void addReference(int codePos, int pointer, char op) {
-		String refCode = generateReferenceCode(codePos, pointer, op);
-		writeToCode(refCode, codePos);
+
+	void generateForwardJumpReferenceCode(final Reference reference)
+	{
+		final int diff = this.calcAddressDiff(reference.codePos, reference.pointer
+				+ reference.shift);
+		final String addCode = this.produceInteger(diff);
+		reference.code = addCode + reference.op;
 	}
-	
+
+	void resolveBackwardReference(final String label, final int labelPos)
+	{
+		for (final Reference reference : this.references)
+		{
+			if (reference.label.equals(label))
+			{
+				reference.pointer = labelPos;
+			}
+		}
+	}
+
+	void addReference(final String label, final int codePos, final int pointer, final char op)
+	{
+		this.references.add(new Reference(label, codePos, pointer, op));
+	}
+
+	int sumCodeSizeOfReferencesInRange(final Reference targReference)
+	{
+		int sum = 0;
+		for (final Reference reference : this.references)
+		{
+			if (targReference.op == 'c')
+			{
+				if (reference.codePos <= targReference.pointer)
+				{
+					sum += reference.code.length();
+				}
+			}
+			else
+			{
+				if (reference == targReference)
+				{
+					continue;
+				}
+
+				if (reference.codePos >= targReference.codePos
+						&& reference.codePos <= targReference.pointer
+						|| reference.codePos >= targReference.pointer
+						&& reference.codePos <= targReference.codePos)
+				{
+					sum += reference.code.length();
+				}
+			}
+		}
+
+		return sum;
+	}
+
+	void generateCallCode(final Reference reference)
+	{
+		final String addCode = this.produceInteger(reference.pointer + reference.shift);
+		reference.code = addCode + reference.op;
+	}
+
+	void generateReferenceCode(final Reference reference)
+	{
+		if (reference.op == 'c')
+		{
+			this.generateCallCode(reference);
+		}
+		else
+		{
+			if (reference.isBackwardReference)
+			{
+				this.generateBackJumpReferenceCode(reference);
+			}
+			else
+			{
+				this.generateForwardJumpReferenceCode(reference);
+			}
+		}
+	}
+
+	void generateReferenceCodes()
+	{
+		// 1. Generate Codes ignoring other references
+		for (final Reference reference : this.references)
+		{
+			this.generateReferenceCode(reference);
+		}
+
+		// 2. fix conflicts between references by changing own jump size (until
+		// no reference code changes anymore)
+		boolean allFixed;
+		do
+		{
+			allFixed = true;
+
+			for (final Reference reference : this.references)
+			{
+				final int sum = this.sumCodeSizeOfReferencesInRange(reference);
+				if (reference.shift != sum)
+				{
+					allFixed = false;
+				}
+
+				reference.shift = sum;
+				this.generateReferenceCode(reference);
+			}
+		}
+		while (!allFixed);
+
+		// 3. shift the codePos of all references according the previous
+		// references
+		int sum = 0;
+		for (final Reference reference : this.references)
+		{
+			reference.codePos += sum;
+			sum += reference.code.length();
+		}
+
+	}
+
+	void writeReferenceCodes()
+	{
+		for (final Reference reference : this.references)
+		{
+			this.writeToCode(reference.code, reference.codePos);
+		}
+	}
+
 	void printMemory()
 	{
-		if (memory.size() == 0)
+		if (this.memory.size() == 0)
 		{
 			return;
 		}
 
-		memOut.print(memory.get(0));
-		for (int i = 1; i < memory.size(); i++)
+		this.memOut.print(this.memory.get(0));
+		for (int i = 1; i < this.memory.size(); i++)
 		{
-			memOut.print(',');
-			memOut.print(memory.get(i));
+			this.memOut.print(',');
+			this.memOut.print(this.memory.get(i));
 		}
 	}
 
 	void printCode()
 	{
-		for (final char c : code)
+		for (final char c : this.code)
 		{
-			codeOut.print(c);
+			this.codeOut.print(c);
 		}
 	}
-	
-	String stripApostrophe(String str) {
+
+	String stripApostrophe(final String str)
+	{
 		return str.substring(1, str.length() - 1);
 	}
 }
@@ -219,6 +412,7 @@ instruction
 			}
 			else {
 				labels.put($identifier.value, getCurrentCodePosition());
+				resolveBackwardReference($identifier.value, getCurrentCodePosition());
 			}
 		}
 		
@@ -354,10 +548,10 @@ instruction
 		{
 			Integer val = labels.get($identifier.value);
 			if(val == null) {
-				System.err.println("-> label '" + $identifier.value + "' is not declared");
+				addReference($identifier.value, getCurrentCodePosition(), -1, 'g');
 			}
 			else {
-				addReference(getCurrentCodePosition(), val.intValue(), 'g');
+				addReference($identifier.value, getCurrentCodePosition(), val.intValue(), 'g');
 			}
 		}
 		
@@ -375,10 +569,10 @@ instruction
 		{
 			Integer val = labels.get($identifier.value);
 			if(val == null) {
-				System.err.println("-> label '" + $identifier.value + "' is not declared");
+				addReference($identifier.value, getCurrentCodePosition(), -1, '?');
 			}
 			else {
-				addReference(getCurrentCodePosition(), val.intValue(), '?');
+				addReference($identifier.value, getCurrentCodePosition(), val.intValue(), '?');
 			}
 		}
 		
@@ -396,10 +590,10 @@ instruction
 		{
 			Integer val = labels.get($identifier.value);
 			if(val == null) {
-				System.err.println("-> label '" + $identifier.value + "' is not declared");
+				addReference($identifier.value, getCurrentCodePosition(), -1, 'c');
 			}
 			else {
-				addReference(getCurrentCodePosition(), val.intValue(), 'c');
+				addReference($identifier.value, getCurrentCodePosition(), val.intValue(), 'c');
 			}
 		}
 		
