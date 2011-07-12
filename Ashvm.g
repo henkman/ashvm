@@ -637,6 +637,11 @@ instruction
 			appendToCode("0^");
 		}
 		
+	|	SWAP instruction_end
+		{
+			appendToCode("1v");
+		}
+		
 	|	INC instruction_end
 		{
 			appendToCode("1+");
@@ -743,6 +748,9 @@ END	:	'end'
 	;
 	
 DUP	:	'dup'
+	;
+	
+SWAP	:	'swap'
 	;
 	
 INC	:	'inc'

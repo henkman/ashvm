@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 Ashvm.g 2011-07-02 17:41:19
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 D:\\Programmieren\\projects\\ashvm\\Ashvm.g 2011-07-12 17:40:33
 
 package org.ashvm;
 
@@ -35,17 +35,18 @@ public class AshvmLexer extends Lexer
 	public static final int DROP = 22;
 	public static final int END = 23;
 	public static final int DUP = 24;
-	public static final int INC = 25;
-	public static final int DEC = 26;
-	public static final int STR = 27;
-	public static final int INT = 28;
-	public static final int IDENTIFIER = 29;
-	public static final int STRING = 30;
-	public static final int INTEGER = 31;
-	public static final int NEWLINE = 32;
-	public static final int COMMENT = 33;
-	public static final int ESC = 34;
-	public static final int WS = 35;
+	public static final int SWAP = 25;
+	public static final int INC = 26;
+	public static final int DEC = 27;
+	public static final int STR = 28;
+	public static final int INT = 29;
+	public static final int IDENTIFIER = 30;
+	public static final int STRING = 31;
+	public static final int INTEGER = 32;
+	public static final int NEWLINE = 33;
+	public static final int COMMENT = 34;
+	public static final int ESC = 35;
+	public static final int WS = 36;
 
 	// delegates
 	// delegators
@@ -69,7 +70,7 @@ public class AshvmLexer extends Lexer
 	@Override
 	public String getGrammarFileName()
 	{
-		return "Ashvm.g";
+		return "D:\\Programmieren\\projects\\ashvm\\Ashvm.g";
 	}
 
 	// $ANTLR start "NOP"
@@ -79,8 +80,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.NOP;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:688:5: ( 'nop' )
-			// Ashvm.g:688:7: 'nop'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:693:5: ( 'nop' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:693:7: 'nop'
 			{
 				this.match("nop");
 
@@ -103,8 +104,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.PINT;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:691:6: ( 'pint' )
-			// Ashvm.g:691:8: 'pint'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:696:6: ( 'pint' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:696:8: 'pint'
 			{
 				this.match("pint");
 
@@ -127,8 +128,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.PCHR;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:694:6: ( 'pchr' )
-			// Ashvm.g:694:8: 'pchr'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:699:6: ( 'pchr' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:699:8: 'pchr'
 			{
 				this.match("pchr");
 
@@ -151,8 +152,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.PUSH;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:697:6: ( 'push' )
-			// Ashvm.g:697:8: 'push'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:702:6: ( 'push' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:702:8: 'push'
 			{
 				this.match("push");
 
@@ -175,8 +176,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.ADD;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:700:5: ( 'add' )
-			// Ashvm.g:700:7: 'add'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:705:5: ( 'add' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:705:7: 'add'
 			{
 				this.match("add");
 
@@ -199,8 +200,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.MUL;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:703:5: ( 'mul' )
-			// Ashvm.g:703:7: 'mul'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:708:5: ( 'mul' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:708:7: 'mul'
 			{
 				this.match("mul");
 
@@ -223,8 +224,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.SUB;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:706:5: ( 'sub' )
-			// Ashvm.g:706:7: 'sub'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:711:5: ( 'sub' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:711:7: 'sub'
 			{
 				this.match("sub");
 
@@ -247,8 +248,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.DIV;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:709:5: ( 'div' )
-			// Ashvm.g:709:7: 'div'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:714:5: ( 'div' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:714:7: 'div'
 			{
 				this.match("div");
 
@@ -271,8 +272,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.CMP;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:712:5: ( 'cmp' )
-			// Ashvm.g:712:7: 'cmp'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:717:5: ( 'cmp' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:717:7: 'cmp'
 			{
 				this.match("cmp");
 
@@ -295,8 +296,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.JMP;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:715:5: ( 'jmp' )
-			// Ashvm.g:715:7: 'jmp'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:720:5: ( 'jmp' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:720:7: 'jmp'
 			{
 				this.match("jmp");
 
@@ -319,8 +320,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.JZ;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:718:4: ( 'jz' )
-			// Ashvm.g:718:6: 'jz'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:723:4: ( 'jz' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:723:6: 'jz'
 			{
 				this.match("jz");
 
@@ -343,8 +344,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.CALL;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:721:6: ( 'call' )
-			// Ashvm.g:721:8: 'call'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:726:6: ( 'call' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:726:8: 'call'
 			{
 				this.match("call");
 
@@ -367,8 +368,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.RET;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:724:5: ( 'ret' )
-			// Ashvm.g:724:7: 'ret'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:729:5: ( 'ret' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:729:7: 'ret'
 			{
 				this.match("ret");
 
@@ -391,8 +392,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.PEEK;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:727:6: ( 'peek' )
-			// Ashvm.g:727:8: 'peek'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:732:6: ( 'peek' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:732:8: 'peek'
 			{
 				this.match("peek");
 
@@ -415,8 +416,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.POKE;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:730:6: ( 'poke' )
-			// Ashvm.g:730:8: 'poke'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:735:6: ( 'poke' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:735:8: 'poke'
 			{
 				this.match("poke");
 
@@ -439,8 +440,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.PICK;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:733:6: ( 'pick' )
-			// Ashvm.g:733:8: 'pick'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:738:6: ( 'pick' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:738:8: 'pick'
 			{
 				this.match("pick");
 
@@ -463,8 +464,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.ROLL;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:736:6: ( 'roll' )
-			// Ashvm.g:736:8: 'roll'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:741:6: ( 'roll' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:741:8: 'roll'
 			{
 				this.match("roll");
 
@@ -487,8 +488,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.DROP;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:739:6: ( 'drop' )
-			// Ashvm.g:739:8: 'drop'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:744:6: ( 'drop' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:744:8: 'drop'
 			{
 				this.match("drop");
 
@@ -511,8 +512,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.END;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:742:5: ( 'end' )
-			// Ashvm.g:742:7: 'end'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:747:5: ( 'end' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:747:7: 'end'
 			{
 				this.match("end");
 
@@ -535,8 +536,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.DUP;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:745:5: ( 'dup' )
-			// Ashvm.g:745:7: 'dup'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:750:5: ( 'dup' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:750:7: 'dup'
 			{
 				this.match("dup");
 
@@ -552,6 +553,30 @@ public class AshvmLexer extends Lexer
 
 	// $ANTLR end "DUP"
 
+	// $ANTLR start "SWAP"
+	public final void mSWAP() throws RecognitionException
+	{
+		try
+		{
+			final int _type = AshvmLexer.SWAP;
+			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:753:6: ( 'swap' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:753:8: 'swap'
+			{
+				this.match("swap");
+
+			}
+
+			this.state.type = _type;
+			this.state.channel = _channel;
+		}
+		finally
+		{
+		}
+	}
+
+	// $ANTLR end "SWAP"
+
 	// $ANTLR start "INC"
 	public final void mINC() throws RecognitionException
 	{
@@ -559,8 +584,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.INC;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:748:5: ( 'inc' )
-			// Ashvm.g:748:7: 'inc'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:756:5: ( 'inc' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:756:7: 'inc'
 			{
 				this.match("inc");
 
@@ -583,8 +608,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.DEC;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:751:5: ( 'dec' )
-			// Ashvm.g:751:7: 'dec'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:759:5: ( 'dec' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:759:7: 'dec'
 			{
 				this.match("dec");
 
@@ -607,8 +632,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.STR;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:754:5: ( 'str' )
-			// Ashvm.g:754:7: 'str'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:762:5: ( 'str' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:762:7: 'str'
 			{
 				this.match("str");
 
@@ -631,8 +656,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.INT;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:757:5: ( 'int' )
-			// Ashvm.g:757:7: 'int'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:765:5: ( 'int' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:765:7: 'int'
 			{
 				this.match("int");
 
@@ -655,8 +680,8 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.COLON;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:760:7: ( ':' )
-			// Ashvm.g:760:9: ':'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:768:7: ( ':' )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:768:9: ':'
 			{
 				this.match(':');
 
@@ -679,12 +704,12 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.INTEGER;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:763:9: ( ( '-' )? (
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:9: ( ( '-' )? (
 			// '0' .. '9' )+ )
-			// Ashvm.g:763:11: ( '-' )? (
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:11: ( '-' )? (
 			// '0' .. '9' )+
 			{
-				// Ashvm.g:763:11: ( '-' )?
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:11: ( '-' )?
 				int alt1 = 2;
 				final int LA1_0 = this.input.LA(1);
 
@@ -695,7 +720,7 @@ public class AshvmLexer extends Lexer
 				switch (alt1)
 				{
 					case 1:
-					// Ashvm.g:763:12: '-'
+					// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:12: '-'
 					{
 						this.match('-');
 
@@ -704,7 +729,7 @@ public class AshvmLexer extends Lexer
 
 				}
 
-				// Ashvm.g:763:18: ( '0' ..
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:18: ( '0' ..
 				// '9' )+
 				int cnt2 = 0;
 				loop2:
@@ -721,7 +746,7 @@ public class AshvmLexer extends Lexer
 					switch (alt2)
 					{
 						case 1:
-						// Ashvm.g:763:19:
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:771:19:
 						// '0' .. '9'
 						{
 							this.matchRange('0', '9');
@@ -760,13 +785,13 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.STRING;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:766:8: ( '\"' ( ESC |
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:774:8: ( '\"' ( ESC |
 			// ~ ( '\\\\' | '\\n' | '\"' ) )* '\"' )
-			// Ashvm.g:766:10: '\"' ( ESC |
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:774:10: '\"' ( ESC |
 			// ~ ( '\\\\' | '\\n' | '\"' ) )* '\"'
 			{
 				this.match('\"');
-				// Ashvm.g:766:14: ( ESC | ~
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:774:14: ( ESC | ~
 				// ( '\\\\' | '\\n' | '\"' ) )*
 				loop3:
 				do
@@ -788,7 +813,7 @@ public class AshvmLexer extends Lexer
 					switch (alt3)
 					{
 						case 1:
-						// Ashvm.g:766:15:
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:774:15:
 						// ESC
 						{
 							this.mESC();
@@ -796,7 +821,7 @@ public class AshvmLexer extends Lexer
 						}
 							break;
 						case 2:
-						// Ashvm.g:766:19: ~
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:774:19: ~
 						// ( '\\\\' | '\\n' | '\"' )
 						{
 							if ((this.input.LA(1) >= '\u0000' && this.input.LA(1) <= '\t')
@@ -843,8 +868,8 @@ public class AshvmLexer extends Lexer
 	{
 		try
 		{
-			// Ashvm.g:771:2: ( '\\\\' . )
-			// Ashvm.g:771:4: '\\\\' .
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:779:2: ( '\\\\' . )
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:779:4: '\\\\' .
 			{
 				this.match('\\');
 				this.matchAny();
@@ -866,17 +891,17 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.NEWLINE;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:775:5: ( ( ( '\\r' )?
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:5: ( ( ( '\\r' )?
 			// '\\n' ) )
-			// Ashvm.g:775:9: ( ( '\\r' )?
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:9: ( ( '\\r' )?
 			// '\\n' )
 			{
-				// Ashvm.g:775:9: ( ( '\\r'
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:9: ( ( '\\r'
 				// )? '\\n' )
-				// Ashvm.g:775:10: ( '\\r'
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:10: ( '\\r'
 				// )? '\\n'
 				{
-					// Ashvm.g:775:10: (
+					// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:10: (
 					// '\\r' )?
 					int alt4 = 2;
 					final int LA4_0 = this.input.LA(1);
@@ -888,7 +913,7 @@ public class AshvmLexer extends Lexer
 					switch (alt4)
 					{
 						case 1:
-						// Ashvm.g:775:11:
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:783:11:
 						// '\\r'
 						{
 							this.match('\r');
@@ -921,13 +946,13 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.COMMENT;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:779:5: ( ';' ( . )*
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:787:5: ( ';' ( . )*
 			// '\\n' )
-			// Ashvm.g:779:9: ';' ( . )*
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:787:9: ';' ( . )*
 			// '\\n'
 			{
 				this.match(';');
-				// Ashvm.g:779:13: ( . )*
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:787:13: ( . )*
 				loop5:
 				do
 				{
@@ -946,7 +971,7 @@ public class AshvmLexer extends Lexer
 					switch (alt5)
 					{
 						case 1:
-						// Ashvm.g:779:13: .
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:787:13: .
 						{
 							this.matchAny();
 
@@ -980,12 +1005,12 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.IDENTIFIER;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:782:12: ( ( '.' )? (
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:790:12: ( ( '.' )? (
 			// 'a' .. 'z' | 'A' .. 'Z' )+ )
-			// Ashvm.g:782:14: ( '.' )? (
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:790:14: ( '.' )? (
 			// 'a' .. 'z' | 'A' .. 'Z' )+
 			{
-				// Ashvm.g:782:14: ( '.' )?
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:790:14: ( '.' )?
 				int alt6 = 2;
 				final int LA6_0 = this.input.LA(1);
 
@@ -996,7 +1021,7 @@ public class AshvmLexer extends Lexer
 				switch (alt6)
 				{
 					case 1:
-					// Ashvm.g:782:15: '.'
+					// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:790:15: '.'
 					{
 						this.match('.');
 
@@ -1005,7 +1030,7 @@ public class AshvmLexer extends Lexer
 
 				}
 
-				// Ashvm.g:782:21: ( 'a' ..
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:790:21: ( 'a' ..
 				// 'z' | 'A' .. 'Z' )+
 				int cnt7 = 0;
 				loop7:
@@ -1022,7 +1047,7 @@ public class AshvmLexer extends Lexer
 					switch (alt7)
 					{
 						case 1:
-						// Ashvm.g:
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:
 						{
 							if ((this.input.LA(1) >= 'A' && this.input.LA(1) <= 'Z')
 									|| (this.input.LA(1) >= 'a' && this.input.LA(1) <= 'z'))
@@ -1072,12 +1097,12 @@ public class AshvmLexer extends Lexer
 		{
 			final int _type = AshvmLexer.WS;
 			final int _channel = BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-			// Ashvm.g:785:4: ( ( ' ' |
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:793:4: ( ( ' ' |
 			// '\\t' )+ )
-			// Ashvm.g:785:6: ( ' ' | '\\t'
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:793:6: ( ' ' | '\\t'
 			// )+
 			{
-				// Ashvm.g:785:6: ( ' ' |
+				// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:793:6: ( ' ' |
 				// '\\t' )+
 				int cnt8 = 0;
 				loop8:
@@ -1094,7 +1119,7 @@ public class AshvmLexer extends Lexer
 					switch (alt8)
 					{
 						case 1:
-						// Ashvm.g:
+						// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:
 						{
 							if (this.input.LA(1) == '\t' || this.input.LA(1) == ' ')
 							{
@@ -1141,226 +1166,233 @@ public class AshvmLexer extends Lexer
 	@Override
 	public void mTokens() throws RecognitionException
 	{
-		// Ashvm.g:1:8: ( NOP | PINT | PCHR
+		// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:8: ( NOP | PINT | PCHR
 		// | PUSH | ADD | MUL | SUB | DIV | CMP | JMP | JZ | CALL | RET | PEEK |
-		// POKE | PICK | ROLL | DROP | END | DUP | INC | DEC | STR | INT | COLON
-		// | INTEGER | STRING | NEWLINE | COMMENT | IDENTIFIER | WS )
-		int alt9 = 31;
+		// POKE | PICK | ROLL | DROP | END | DUP | SWAP | INC | DEC | STR | INT
+		// | COLON | INTEGER | STRING | NEWLINE | COMMENT | IDENTIFIER | WS )
+		int alt9 = 32;
 		alt9 = this.dfa9.predict(this.input);
 		switch (alt9)
 		{
 			case 1:
-			// Ashvm.g:1:10: NOP
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:10: NOP
 			{
 				this.mNOP();
 
 			}
 				break;
 			case 2:
-			// Ashvm.g:1:14: PINT
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:14: PINT
 			{
 				this.mPINT();
 
 			}
 				break;
 			case 3:
-			// Ashvm.g:1:19: PCHR
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:19: PCHR
 			{
 				this.mPCHR();
 
 			}
 				break;
 			case 4:
-			// Ashvm.g:1:24: PUSH
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:24: PUSH
 			{
 				this.mPUSH();
 
 			}
 				break;
 			case 5:
-			// Ashvm.g:1:29: ADD
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:29: ADD
 			{
 				this.mADD();
 
 			}
 				break;
 			case 6:
-			// Ashvm.g:1:33: MUL
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:33: MUL
 			{
 				this.mMUL();
 
 			}
 				break;
 			case 7:
-			// Ashvm.g:1:37: SUB
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:37: SUB
 			{
 				this.mSUB();
 
 			}
 				break;
 			case 8:
-			// Ashvm.g:1:41: DIV
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:41: DIV
 			{
 				this.mDIV();
 
 			}
 				break;
 			case 9:
-			// Ashvm.g:1:45: CMP
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:45: CMP
 			{
 				this.mCMP();
 
 			}
 				break;
 			case 10:
-			// Ashvm.g:1:49: JMP
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:49: JMP
 			{
 				this.mJMP();
 
 			}
 				break;
 			case 11:
-			// Ashvm.g:1:53: JZ
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:53: JZ
 			{
 				this.mJZ();
 
 			}
 				break;
 			case 12:
-			// Ashvm.g:1:56: CALL
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:56: CALL
 			{
 				this.mCALL();
 
 			}
 				break;
 			case 13:
-			// Ashvm.g:1:61: RET
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:61: RET
 			{
 				this.mRET();
 
 			}
 				break;
 			case 14:
-			// Ashvm.g:1:65: PEEK
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:65: PEEK
 			{
 				this.mPEEK();
 
 			}
 				break;
 			case 15:
-			// Ashvm.g:1:70: POKE
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:70: POKE
 			{
 				this.mPOKE();
 
 			}
 				break;
 			case 16:
-			// Ashvm.g:1:75: PICK
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:75: PICK
 			{
 				this.mPICK();
 
 			}
 				break;
 			case 17:
-			// Ashvm.g:1:80: ROLL
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:80: ROLL
 			{
 				this.mROLL();
 
 			}
 				break;
 			case 18:
-			// Ashvm.g:1:85: DROP
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:85: DROP
 			{
 				this.mDROP();
 
 			}
 				break;
 			case 19:
-			// Ashvm.g:1:90: END
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:90: END
 			{
 				this.mEND();
 
 			}
 				break;
 			case 20:
-			// Ashvm.g:1:94: DUP
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:94: DUP
 			{
 				this.mDUP();
 
 			}
 				break;
 			case 21:
-			// Ashvm.g:1:98: INC
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:98: SWAP
+			{
+				this.mSWAP();
+
+			}
+				break;
+			case 22:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:103: INC
 			{
 				this.mINC();
 
 			}
 				break;
-			case 22:
-			// Ashvm.g:1:102: DEC
+			case 23:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:107: DEC
 			{
 				this.mDEC();
 
 			}
 				break;
-			case 23:
-			// Ashvm.g:1:106: STR
+			case 24:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:111: STR
 			{
 				this.mSTR();
 
 			}
 				break;
-			case 24:
-			// Ashvm.g:1:110: INT
+			case 25:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:115: INT
 			{
 				this.mINT();
 
 			}
 				break;
-			case 25:
-			// Ashvm.g:1:114: COLON
+			case 26:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:119: COLON
 			{
 				this.mCOLON();
 
 			}
 				break;
-			case 26:
-			// Ashvm.g:1:120: INTEGER
+			case 27:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:125: INTEGER
 			{
 				this.mINTEGER();
 
 			}
 				break;
-			case 27:
-			// Ashvm.g:1:128: STRING
+			case 28:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:133: STRING
 			{
 				this.mSTRING();
 
 			}
 				break;
-			case 28:
-			// Ashvm.g:1:135: NEWLINE
+			case 29:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:140: NEWLINE
 			{
 				this.mNEWLINE();
 
 			}
 				break;
-			case 29:
-			// Ashvm.g:1:143: COMMENT
+			case 30:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:148: COMMENT
 			{
 				this.mCOMMENT();
 
 			}
 				break;
-			case 30:
-			// Ashvm.g:1:151: IDENTIFIER
+			case 31:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:156: IDENTIFIER
 			{
 				this.mIDENTIFIER();
 
 			}
 				break;
-			case 31:
-			// Ashvm.g:1:162: WS
+			case 32:
+			// D:\\Programmieren\\projects\\ashvm\\Ashvm.g:1:167: WS
 			{
 				this.mWS();
 
@@ -1372,27 +1404,28 @@ public class AshvmLexer extends Lexer
 	}
 
 	protected DFA9 dfa9 = new DFA9(this);
-	static final String DFA9_eotS = "\1\uffff\13\21\7\uffff\21\21\1\73\4\21\1\101\6\21\1\110\1\111\1"
-			+ "\112\1\113\1\114\1\21\1\116\1\117\1\120\1\21\1\122\1\uffff\1\123"
-			+ "\1\21\1\125\1\126\1\127\1\uffff\1\130\1\131\1\132\1\133\1\134\1"
-			+ "\135\5\uffff\1\136\3\uffff\1\137\2\uffff\1\140\14\uffff";
-	static final String DFA9_eofS = "\141\uffff";
+	static final String DFA9_eotS = "\1\uffff\13\21\7\uffff\22\21\1\75\4\21\1\103\6\21\1\112\1\113\1"
+			+ "\114\1\21\1\116\1\117\1\21\1\121\1\122\1\123\1\21\1\125\1\uffff"
+			+ "\1\126\1\21\1\130\1\131\1\132\1\uffff\1\133\1\134\1\135\1\136\1"
+			+ "\137\1\140\3\uffff\1\141\2\uffff\1\142\3\uffff\1\143\2\uffff\1\144" + "\15\uffff";
+	static final String DFA9_eofS = "\145\uffff";
 	static final String DFA9_minS = "\1\11\1\157\1\143\1\144\1\165\1\164\1\145\1\141\1\155\1\145\2\156"
 			+ "\7\uffff\1\160\1\143\1\150\1\163\1\145\1\153\1\144\1\154\1\142\1"
-			+ "\162\1\166\1\157\1\160\1\143\1\160\1\154\1\160\1\101\1\164\1\154"
-			+ "\1\144\1\143\1\101\1\164\1\153\1\162\1\150\1\153\1\145\5\101\1\160"
-			+ "\3\101\1\154\1\101\1\uffff\1\101\1\154\3\101\1\uffff\6\101\5\uffff"
-			+ "\1\101\3\uffff\1\101\2\uffff\1\101\14\uffff";
-	static final String DFA9_maxS = "\1\172\1\157\1\165\1\144\3\165\1\155\1\172\1\157\2\156\7\uffff"
-			+ "\1\160\1\156\1\150\1\163\1\145\1\153\1\144\1\154\1\142\1\162\1\166"
-			+ "\1\157\1\160\1\143\1\160\1\154\1\160\1\172\1\164\1\154\1\144\1\164"
-			+ "\1\172\1\164\1\153\1\162\1\150\1\153\1\145\5\172\1\160\3\172\1\154"
-			+ "\1\172\1\uffff\1\172\1\154\3\172\1\uffff\6\172\5\uffff\1\172\3\uffff"
-			+ "\1\172\2\uffff\1\172\14\uffff";
-	static final String DFA9_acceptS = "\14\uffff\1\31\1\32\1\33\1\34\1\35\1\36\1\37\50\uffff\1\13\5\uffff"
-			+ "\1\1\6\uffff\1\5\1\6\1\7\1\27\1\10\1\uffff\1\24\1\26\1\11\1\uffff"
-			+ "\1\12\1\15\1\uffff\1\23\1\25\1\30\1\2\1\20\1\3\1\4\1\16\1\17\1\22" + "\1\14\1\21";
-	static final String DFA9_specialS = "\141\uffff}>";
+			+ "\141\1\162\1\166\1\157\1\160\1\143\1\160\1\154\1\160\1\101\1\164"
+			+ "\1\154\1\144\1\143\1\101\1\164\1\153\1\162\1\150\1\153\1\145\3\101"
+			+ "\1\160\2\101\1\160\3\101\1\154\1\101\1\uffff\1\101\1\154\3\101\1"
+			+ "\uffff\6\101\3\uffff\1\101\2\uffff\1\101\3\uffff\1\101\2\uffff\1" + "\101\15\uffff";
+	static final String DFA9_maxS = "\1\172\1\157\1\165\1\144\1\165\1\167\1\165\1\155\1\172\1\157\2"
+			+ "\156\7\uffff\1\160\1\156\1\150\1\163\1\145\1\153\1\144\1\154\1\142"
+			+ "\1\141\1\162\1\166\1\157\1\160\1\143\1\160\1\154\1\160\1\172\1\164"
+			+ "\1\154\1\144\1\164\1\172\1\164\1\153\1\162\1\150\1\153\1\145\3\172"
+			+ "\1\160\2\172\1\160\3\172\1\154\1\172\1\uffff\1\172\1\154\3\172\1"
+			+ "\uffff\6\172\3\uffff\1\172\2\uffff\1\172\3\uffff\1\172\2\uffff\1" + "\172\15\uffff";
+	static final String DFA9_acceptS = "\14\uffff\1\32\1\33\1\34\1\35\1\36\1\37\1\40\52\uffff\1\13\5\uffff"
+			+ "\1\1\6\uffff\1\5\1\6\1\7\1\uffff\1\30\1\10\1\uffff\1\24\1\27\1\11"
+			+ "\1\uffff\1\12\1\15\1\uffff\1\23\1\26\1\31\1\2\1\20\1\3\1\4\1\16"
+			+ "\1\17\1\25\1\22\1\14\1\21";
+	static final String DFA9_specialS = "\145\uffff}>";
 	static final String[] DFA9_transitionS =
 	{
 			"\1\22\1\17\2\uffff\1\17\22\uffff\1\22\1\uffff\1\16\12\uffff"
@@ -1400,21 +1433,22 @@ public class AshvmLexer extends Lexer
 					+ "\1\21\1\7\1\6\1\12\3\21\1\13\1\10\2\21\1\4\1\1\1\21\1\2\1\21"
 					+ "\1\11\1\5\7\21", "\1\23",
 			"\1\25\1\uffff\1\27\3\uffff\1\24\5\uffff\1\30\5\uffff\1\26", "\1\31", "\1\32",
-			"\1\34\1\33", "\1\40\3\uffff\1\35\10\uffff\1\36\2\uffff\1\37", "\1\42\13\uffff\1\41",
-			"\1\43\14\uffff\1\44", "\1\45\11\uffff\1\46", "\1\47", "\1\50", "", "", "", "", "", "",
-			"", "\1\51", "\1\53\12\uffff\1\52", "\1\54", "\1\55", "\1\56", "\1\57", "\1\60",
-			"\1\61", "\1\62", "\1\63", "\1\64", "\1\65", "\1\66", "\1\67", "\1\70", "\1\71",
-			"\1\72", "\32\21\6\uffff\32\21", "\1\74", "\1\75", "\1\76", "\1\77\20\uffff\1\100",
-			"\32\21\6\uffff\32\21", "\1\102", "\1\103", "\1\104", "\1\105", "\1\106", "\1\107",
+			"\1\35\1\33\1\uffff\1\34", "\1\41\3\uffff\1\36\10\uffff\1\37\2\uffff\1\40",
+			"\1\43\13\uffff\1\42", "\1\44\14\uffff\1\45", "\1\46\11\uffff\1\47", "\1\50", "\1\51",
+			"", "", "", "", "", "", "", "\1\52", "\1\54\12\uffff\1\53", "\1\55", "\1\56", "\1\57",
+			"\1\60", "\1\61", "\1\62", "\1\63", "\1\64", "\1\65", "\1\66", "\1\67", "\1\70",
+			"\1\71", "\1\72", "\1\73", "\1\74", "\32\21\6\uffff\32\21", "\1\76", "\1\77", "\1\100",
+			"\1\101\20\uffff\1\102", "\32\21\6\uffff\32\21", "\1\104", "\1\105", "\1\106",
+			"\1\107", "\1\110", "\1\111", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
+			"\32\21\6\uffff\32\21", "\1\115", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
+			"\1\120", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
+			"\1\124", "\32\21\6\uffff\32\21", "", "\32\21\6\uffff\32\21", "\1\127",
+			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "",
 			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
-			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\1\115", "\32\21\6\uffff\32\21",
-			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\1\121", "\32\21\6\uffff\32\21", "",
-			"\32\21\6\uffff\32\21", "\1\124", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
-			"\32\21\6\uffff\32\21", "", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
-			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21",
-			"\32\21\6\uffff\32\21", "", "", "", "", "", "\32\21\6\uffff\32\21", "", "", "",
+			"\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "\32\21\6\uffff\32\21", "", "", "",
+			"\32\21\6\uffff\32\21", "", "", "\32\21\6\uffff\32\21", "", "", "",
 			"\32\21\6\uffff\32\21", "", "", "\32\21\6\uffff\32\21", "", "", "", "", "", "", "", "",
-			"", "", "", ""
+			"", "", "", "", ""
 	};
 
 	static final short[] DFA9_eot = DFA.unpackEncodedString(AshvmLexer.DFA9_eotS);
@@ -1454,7 +1488,7 @@ public class AshvmLexer extends Lexer
 		@Override
 		public String getDescription()
 		{
-			return "1:1: Tokens : ( NOP | PINT | PCHR | PUSH | ADD | MUL | SUB | DIV | CMP | JMP | JZ | CALL | RET | PEEK | POKE | PICK | ROLL | DROP | END | DUP | INC | DEC | STR | INT | COLON | INTEGER | STRING | NEWLINE | COMMENT | IDENTIFIER | WS );";
+			return "1:1: Tokens : ( NOP | PINT | PCHR | PUSH | ADD | MUL | SUB | DIV | CMP | JMP | JZ | CALL | RET | PEEK | POKE | PICK | ROLL | DROP | END | DUP | SWAP | INC | DEC | STR | INT | COLON | INTEGER | STRING | NEWLINE | COMMENT | IDENTIFIER | WS );";
 		}
 	}
 
